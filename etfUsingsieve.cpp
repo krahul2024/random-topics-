@@ -57,7 +57,9 @@ void oneMoreMethod(int n){
 	for(int i=1;i<=n;i++)dp[i]=i;
 	for(int i=2;i<=n;i++){
 		if(dp[i]==i)
-			for(int j=i;j<=n;j+=i)dp[j]-=dp[j]/i;}
+			for(int j=i;j<=n;j+=i)
+				dp[j]-=dp[j]/i;// this step is basically n*(1-1/p1)*(1-1/p2).....
+	}
 	for(int i=1;i<=n;i++)cout<<dp[i]<<"\n";
 }
 // above methods are for queries but we can make second or anotherMethod(n) run for large numbers upto 10^9 by removing first for
