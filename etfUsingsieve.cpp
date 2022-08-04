@@ -10,6 +10,7 @@ using namespace std;
 // #define int long long int
 const int N=6e6+1;
 int phi[N],spf[N];
+vector<int>dp(N);
 vector<int>a(N,1);
 // function to compare whether two numbers are coprime or not
 bool iscoprime(int a,int b){
@@ -50,6 +51,14 @@ void anotherMethod(int n){
 		// cout<<"\n";
 		cout<<sum<<"\n";
 	}
+}
+//this one is also using sieve 
+void oneMoreMethod(int n){
+	for(int i=1;i<=n;i++)dp[i]=i;
+	for(int i=2;i<=n;i++){
+		if(dp[i]==i)
+			for(int j=i;j<=n;j+=i)dp[j]-=dp[j]/i;}
+	for(int i=1;i<=n;i++)cout<<dp[i]<<"\n";
 }
 // above methods are for queries but we can make second or anotherMethod(n) run for large numbers upto 10^9 by removing first for
 // loop then we will be having time complexity O(√n). below is the code for same
