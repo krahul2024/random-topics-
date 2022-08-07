@@ -8,6 +8,8 @@
 using namespace std;
 const int N=1e9+1;
 bitset<N>a;
+//this gives binary representation of a number 179851111111 in 32 bit
+    // bitset<32>a(179851111111);
 bitset<N>dp;
 void knapsack(){
   int n=4;
