@@ -9,6 +9,10 @@ using namespace std;
 #define pb push_back
 
 //taking unknown number of integer inputs in cpp
+// past this in input secton for integer o/p or input string(s) of integers seperated by whitespaces in a line
+// 1 2 3 4 5
+// 1 2 11 1111 2232
+// 12 21212 1213 1222114561665
 signed main()
 {
   char s[1000];
